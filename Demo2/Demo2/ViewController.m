@@ -6,15 +6,28 @@
 //
 
 #import "ViewController.h"
+#import "Add2StringActivity.h"
+#import "SecondViewController.h"
+#import "ThirdViewController.h"
 
 @interface ViewController ()
 @property (nonatomic,strong) UITextField *textField;
 @property (nonatomic,strong) UIButton *shareBtn;
 @property (nonatomic,strong) UIActivityViewController *activityViewController;
+@property (nonatomic,strong) UIButton *displaySecondViewBtn;
+@property (nonatomic,strong) UIButton *displayThirdViewBtn;
 
 @end
 
 @implementation ViewController
+- (void) performDisplaySecondViewController:(id) paramSender{
+    SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:nil bundle:NULL];
+    [self.navigationController pushViewController:secondViewController animated:YES];
+}
+- (void) performDisplayThirdViewController:(id) paramSender{
+    ThirdViewController *thirdViewController = [[ThirdViewController alloc] initWithNibName:nil bundle:NULL];
+    [self.navigationController pushViewController:thirdViewController animated:YES];
+}
 - (void) createTextField{
     self.textField = [[UITextField alloc]initWithFrame:CGRectMake(20, 60, 300, 30)];
    // self.textField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -33,19 +46,32 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"First View";
+    // set up display second view button
+    self.displaySecondViewBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.displaySecondViewBtn setTitle:@"Second View" forState:UIControlStateNormal];
+    [self.displaySecondViewBtn sizeToFit];
+    self.displaySecondViewBtn.center = self.view.center;
+    [self.displaySecondViewBtn addTarget:self action:@selector(performDisplaySecondViewController:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.displaySecondViewBtn];
+    //set up display third view button
+    self.displayThirdViewBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.displayThirdViewBtn setTitle:@"Third View" forState:UIControlStateNormal];
+    [self.displayThirdViewBtn sizeToFit];
+    self.displayThirdViewBtn.center = CGPointMake(self.view.frame.size.width/2, 400);
+    [self.displayThirdViewBtn addTarget:self action:@selector(performDisplayThirdViewController:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.displayThirdViewBtn];
     self.view.backgroundColor = [UIColor whiteColor];
+    //set up text field
     [self createTextField];
-    CGRect newFrame = self.textField.frame;
-    NSLog(@"%@",NSStringFromCGRect(newFrame));
+    //set up share button
     [self createButton];
-    
-    UILabel *yourLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 300, 70)];
-            [yourLabel setTextColor:[UIColor brownColor]];
-            [yourLabel setBackgroundColor:[UIColor clearColor]];
-            [yourLabel setFont:[UIFont fontWithName: @"Trebuchet MS" size: 14.0f]];
-            [yourLabel setText:@"UIViewController Demo"];
-            [self.view addSubview:yourLabel];
     // Do any additional setup after loading the view.
+    
+    NSArray *item = @[@"string1",
+                      @"String2"];
+    UIActivityViewController *activity = [[UIActivityViewController alloc] initWithActivityItems:item applicationActivities:@[[Add2StringActivity new]]];
+    [self presentViewController:activity animated:YES completion:nil];
 }
 - (void) didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];

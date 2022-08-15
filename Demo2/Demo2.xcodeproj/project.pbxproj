@@ -16,6 +16,9 @@
 		B560AEF728A6328B00CB7C20 /* Demo2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B560AEF628A6328B00CB7C20 /* Demo2Tests.m */; };
 		B560AF0128A6328B00CB7C20 /* Demo2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B560AF0028A6328B00CB7C20 /* Demo2UITests.m */; };
 		B560AF0328A6328B00CB7C20 /* Demo2UITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B560AF0228A6328B00CB7C20 /* Demo2UITestsLaunchTests.m */; };
+		B5CCFBED28A9D9FE00A56FD9 /* Add2StringActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCFBEC28A9D9FE00A56FD9 /* Add2StringActivity.m */; };
+		B5CCFBF028A9F7FF00A56FD9 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCFBEF28A9F7FF00A56FD9 /* SecondViewController.m */; };
+		B5CCFBF328AA00C200A56FD9 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCFBF228AA00C200A56FD9 /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,12 @@
 		B560AEFC28A6328B00CB7C20 /* Demo2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B560AF0028A6328B00CB7C20 /* Demo2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo2UITests.m; sourceTree = "<group>"; };
 		B560AF0228A6328B00CB7C20 /* Demo2UITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo2UITestsLaunchTests.m; sourceTree = "<group>"; };
+		B5CCFBEB28A9D9FE00A56FD9 /* Add2StringActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Add2StringActivity.h; sourceTree = "<group>"; };
+		B5CCFBEC28A9D9FE00A56FD9 /* Add2StringActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Add2StringActivity.m; sourceTree = "<group>"; };
+		B5CCFBEE28A9F7FF00A56FD9 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		B5CCFBEF28A9F7FF00A56FD9 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		B5CCFBF128AA00C200A56FD9 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		B5CCFBF228AA00C200A56FD9 /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +121,12 @@
 				B560AEE828A6328A00CB7C20 /* LaunchScreen.storyboard */,
 				B560AEEB28A6328A00CB7C20 /* Info.plist */,
 				B560AEEC28A6328A00CB7C20 /* main.m */,
+				B5CCFBEB28A9D9FE00A56FD9 /* Add2StringActivity.h */,
+				B5CCFBEC28A9D9FE00A56FD9 /* Add2StringActivity.m */,
+				B5CCFBEE28A9F7FF00A56FD9 /* SecondViewController.h */,
+				B5CCFBEF28A9F7FF00A56FD9 /* SecondViewController.m */,
+				B5CCFBF128AA00C200A56FD9 /* ThirdViewController.h */,
+				B5CCFBF228AA00C200A56FD9 /* ThirdViewController.m */,
 			);
 			path = Demo2;
 			sourceTree = "<group>";
@@ -262,10 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CCFBF028A9F7FF00A56FD9 /* SecondViewController.m in Sources */,
+				B5CCFBED28A9D9FE00A56FD9 /* Add2StringActivity.m in Sources */,
 				B560AEE228A6328600CB7C20 /* ViewController.m in Sources */,
 				B560AEDC28A6328600CB7C20 /* AppDelegate.m in Sources */,
 				B560AEED28A6328A00CB7C20 /* main.m in Sources */,
 				B560AEDF28A6328600CB7C20 /* SceneDelegate.m in Sources */,
+				B5CCFBF328AA00C200A56FD9 /* ThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
